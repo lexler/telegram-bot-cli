@@ -1,0 +1,34 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: src/go.mod
+
+      - run: go test ./...
+        working-directory: src
+
+      - name: Build macOS arm64
+        run: GOOS=darwin GOARCH=arm64 go build -o ../telegram-bot-cli-darwin-arm64 .
+        working-directory: src
+
+      - name: Build macOS amd64
+        run: GOOS=darwin GOARCH=amd64 go build -o ../telegram-bot-cli-darwin-amd64 .
+        working-directory: src
+
+      - name: Create release
+        run: gh release create "${{ github.ref_name }}" telegram-bot-cli-darwin-arm64 telegram-bot-cli-darwin-amd64 --generate-notes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
