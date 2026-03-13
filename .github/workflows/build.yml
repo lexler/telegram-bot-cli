@@ -1,10 +1,6 @@
 name: Build
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -16,8 +12,6 @@ jobs:
         with:
           go-version-file: src/go.mod
 
-      - run: go test ./...
-        working-directory: src
+      - run: ./test.sh
 
-      - run: go build -o telegram-bot-cli .
-        working-directory: src
+      - run: ./build.sh
