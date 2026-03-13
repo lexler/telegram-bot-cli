@@ -7,11 +7,11 @@ A Go CLI for sending messages to Telegram.
 Download the latest binary from [GitHub Releases](https://github.com/lexler/telegram-bot-cli/releases).
 
 ```bash
-# macOS Apple Silicon (arm64)
-curl -L https://github.com/lexler/telegram-bot-cli/releases/latest/download/telegram-bot-cli-darwin-arm64 -o telegram-bot-cli
+# Mac Apple Silicon
+curl -L https://github.com/lexler/telegram-bot-cli/releases/latest/download/telegram-bot-cli-mac-apple-silicon -o telegram-bot-cli
 
-# macOS Intel (amd64)
-curl -L https://github.com/lexler/telegram-bot-cli/releases/latest/download/telegram-bot-cli-darwin-amd64 -o telegram-bot-cli
+# Mac Intel
+curl -L https://github.com/lexler/telegram-bot-cli/releases/latest/download/telegram-bot-cli-mac-intel -o telegram-bot-cli
 
 chmod +x telegram-bot-cli
 mv telegram-bot-cli /usr/local/bin/
