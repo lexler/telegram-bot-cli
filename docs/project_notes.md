@@ -14,13 +14,6 @@ The release workflow builds Mac Apple Silicon and Mac Intel binaries and attache
 ```
 telegram-bot-cli/
 ├── src/                   # Go source code (module root)
-│   ├── main.go            # entry point + command routing
-│   ├── config.go          # ~/.config/telegram-bot-cli/config.toml
-│   ├── auth.go            # set bot token
-│   ├── status.go          # verify token (getMe API)
-│   ├── send.go            # send message to chat
-│   ├── trace.go           # discover chat ID interactively
-│   └── main_test.go       # placeholder test
 ├── build.sh               # builds to build/telegram-bot-cli
 ├── test.sh                # runs go test
 ├── docs/
@@ -31,9 +24,7 @@ telegram-bot-cli/
     └── release.yml         # release: build binaries on v* tag
 ```
 
-## Origin
 
-Extracted from `lexler/exercise-bot` repo (`telegram_cli/` directory). The extraction process is documented in `exercise-bot/docs/extract_subproject.process.md`.
 
 ## Key decisions
 

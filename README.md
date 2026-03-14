@@ -1,6 +1,14 @@
-# telegram-bot-cli
+<p align="center">
+  <img src="docs/logo.png" alt="telegram-bot-cli" width="200">
+</p>
 
-A Go CLI for sending messages to Telegram.
+<h1 align="center">telegram-bot-cli</h1>
+
+<p align="center">A CLI for sending messages to Telegram. For Mac OS.</p>
+
+<p align="center">
+  <a href="https://github.com/lexler/telegram-bot-cli/actions/workflows/build.yml"><img src="https://github.com/lexler/telegram-bot-cli/actions/workflows/build.yml/badge.svg" alt="Build"></a>
+</p>
 
 ## Installation
 
